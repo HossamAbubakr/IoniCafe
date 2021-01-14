@@ -1,0 +1,1222 @@
+{
+	"info": {
+		"_postman_id": "4f307f73-de20-45d6-918a-8366d78dad1c",
+		"name": "The Ionic Cafe",
+		"description": "A full documentation of the endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "public",
+			"item": [
+				{
+					"name": "/drinks",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains drinks array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.drinks).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/drinks",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/drinks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/drinks",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"drinks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "269"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Nov 2020 12:39:38 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"drinks\": [\n        {\n            \"id\": 1,\n            \"recipe\": [\n                {\n                    \"color\": \"white\",\n                    \"parts\": 1\n                },\n                {\n                    \"color\": \"brown\",\n                    \"parts\": 2\n                }\n            ],\n            \"title\": \"Frappuccino\"\n        }\n    ],\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/drinks-detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/drinks-detail",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks-detail"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/drinks-detail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/drinks-detail",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"drinks-detail"
+									]
+								}
+							},
+							"status": "UNAUTHORIZED",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "170"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Nov 2020 12:39:33 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": 401,\n    \"message\": \"unauthorized ({'code': 'authorization_header_missing', 'description': 'Authorization header is expected.'}, 401)\",\n    \"success\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "/drinks",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/drinks",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/drinks",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/drinks",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"drinks"
+									]
+								}
+							},
+							"status": "UNAUTHORIZED",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "170"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Nov 2020 12:39:29 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": 401,\n    \"message\": \"unauthorized ({'code': 'authorization_header_missing', 'description': 'Authorization header is expected.'}, 401)\",\n    \"success\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "/drinks/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/drinks/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/drinks/1",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/drinks/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"drinks",
+										"1"
+									]
+								}
+							},
+							"status": "UNAUTHORIZED",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "170"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Nov 2020 12:39:23 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": 401,\n    \"message\": \"unauthorized ({'code': 'authorization_header_missing', 'description': 'Authorization header is expected.'}, 401)\",\n    \"success\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "/drinks/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/drinks/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/drinks/1",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/drinks/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"drinks",
+										"1"
+									]
+								}
+							},
+							"status": "UNAUTHORIZED",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "170"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Nov 2020 12:39:15 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": 401,\n    \"message\": \"unauthorized ({'code': 'authorization_header_missing', 'description': 'Authorization header is expected.'}, 401)\",\n    \"success\": false\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "barista",
+			"item": [
+				{
+					"name": "/drinks",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains drinks array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.drinks).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/drinks",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/drinks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/drinks",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"drinks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "269"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Nov 2020 12:36:07 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"drinks\": [\n        {\n            \"id\": 1,\n            \"recipe\": [\n                {\n                    \"color\": \"white\",\n                    \"parts\": 1\n                },\n                {\n                    \"color\": \"brown\",\n                    \"parts\": 2\n                }\n            ],\n            \"title\": \"Frappuccino\"\n        }\n    ],\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/drinks-detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/drinks-detail",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks-detail"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/drinks-detail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/drinks-detail",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"drinks-detail"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "326"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Nov 2020 12:36:02 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"drinks\": [\n        {\n            \"id\": 1,\n            \"recipe\": [\n                {\n                    \"color\": \"white\",\n                    \"name\": \"Cream\",\n                    \"parts\": 1\n                },\n                {\n                    \"color\": \"brown\",\n                    \"name\": \"Coffee\",\n                    \"parts\": 2\n                }\n            ],\n            \"title\": \"Frappuccino\"\n        }\n    ],\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/drinks",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik4wTkNOVEEzTWpaQ1FUa3lRMEl6TmtORk0wWXhRVFUwT1RFMFFVVkNSRUpDT1RBME1EUXpOUSJ9.eyJpc3MiOiJodHRwczovL3VkYWNpdHktZnNuZC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDY3MTQ4MTQ0MTcwNjk3MTI4OTMiLCJhdWQiOlsiZGV2IiwiaHR0cHM6Ly91ZGFjaXR5LWZzbmQuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU2MDg5MDE2MCwiZXhwIjoxNTYwODk3MzYwLCJhenAiOiJPSjVwQk9ZSURFa09FVFVmUWo1ajdsSDZFTFcwMkd1MCIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6ZHJpbmtzIiwiZ2V0OmRyaW5rcy1kZXRhaWwiXX0.j9ocW47_exQOkEa10ffh8eijGvrIMxnGRzCmbrXnfaN_8ULsgA7AnWYMtvP8RmPWvT9n8sReWnFuJajUHBUbnBO2GuJ4aM3-WDUBeJT0X_mpGUWs4lxaNTbIkWdiWPTsEiRnP3wT-dU_v3Olw2PB4UMajMIjSH-IdF2Y1CiJIOaM0gV44RGZRyRvj6C2_mOkMfoXxzw-HrVvTRCo1NcUPea5Bs04POni7azx-B7FstP_HLm0dEbbge4XbmovHwlIXknIoI8PbuGXeLBqE2hv8fErKFBuIykxzK0nErH5zSPCrkM-_9smb8TLGAH-E5j1KQb6SHDKtcV_QHnsUYFuXA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/drinks",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/drinks",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/drinks",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"drinks"
+									]
+								}
+							},
+							"status": "UNAUTHORIZED",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "309"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Nov 2020 12:35:52 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": 401,\n    \"message\": \"unauthorized 401 Unauthorized: The server could not verify that you are authorized to access the URL requested. You either supplied the wrong credentials (e.g. a bad password), or your browser doesn't understand how to supply the credentials required.\",\n    \"success\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "/drinks/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/drinks/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/drinks/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/drinks/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "manager",
+			"item": [
+				{
+					"name": "/drinks",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains drinks array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.drinks).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/drinks",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/drinks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/drinks",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"drinks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "269"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Nov 2020 12:41:53 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"drinks\": [\n        {\n            \"id\": 1,\n            \"recipe\": [\n                {\n                    \"color\": \"white\",\n                    \"parts\": 1\n                },\n                {\n                    \"color\": \"brown\",\n                    \"parts\": 2\n                }\n            ],\n            \"title\": \"Frappuccino\"\n        }\n    ],\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/drinks-detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains drinks array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.drinks).to.be.an('array')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/drinks-detail",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks-detail"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/drinks-detail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/drinks-detail",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"drinks-detail"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "326"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Nov 2020 12:42:04 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"drinks\": [\n        {\n            \"id\": 1,\n            \"recipe\": [\n                {\n                    \"color\": \"white\",\n                    \"name\": \"Cream\",\n                    \"parts\": 1\n                },\n                {\n                    \"color\": \"brown\",\n                    \"name\": \"Coffee\",\n                    \"parts\": 2\n                }\n            ],\n            \"title\": \"Frappuccino\"\n        }\n    ],\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/drinks",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Water3\",\n    \"recipe\": [{\n        \"name\": \"Water\",\n        \"color\": \"blue\",\n        \"parts\": 1\n    }]\n}"
+						},
+						"url": {
+							"raw": "{{host}}/drinks",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/drinks",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Water3\",\n    \"recipe\": [{\n        \"name\": \"Water\",\n        \"color\": \"blue\",\n        \"parts\": 1\n    }]\n}"
+								},
+								"url": {
+									"raw": "{{host}}/drinks",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"drinks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "189"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Nov 2020 12:42:13 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"drinks\": {\n        \"id\": 2,\n        \"recipe\": [\n            {\n                \"color\": \"blue\",\n                \"name\": \"Water\",\n                \"parts\": 1\n            }\n        ],\n        \"title\": \"Water3\"\n    },\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/drinks/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"value contains drinks array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.drinks).to.be.an('object')",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Frappuccino\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/drinks/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/drinks/1",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Frappuccino\"\n}"
+								},
+								"url": {
+									"raw": "{{host}}/drinks/1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"drinks",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "286"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Nov 2020 12:42:25 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"drinks\": {\n        \"id\": 1,\n        \"recipe\": [\n            {\n                \"color\": \"white\",\n                \"name\": \"Cream\",\n                \"parts\": 1\n            },\n            {\n                \"color\": \"brown\",\n                \"name\": \"Coffee\",\n                \"parts\": 2\n            }\n        ],\n        \"title\": \"Frappuccino\"\n    },\n    \"success\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "/drinks/1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/drinks/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"drinks",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "/drinks/1",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/drinks/2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"drinks",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Server",
+									"value": "Werkzeug/1.0.1 Python/3.8.5"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Nov 2020 12:42:40 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"delete\": 2,\n    \"success\": true\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost:5000"
+		}
+	]
+}
