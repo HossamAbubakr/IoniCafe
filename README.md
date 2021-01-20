@@ -186,7 +186,7 @@ You can get the project up and running in a few simple steps.
 pip install -r requirements.txt
 ```
 2. Supply your own Auth0 information at auth/auth.py
-```
+```python
 AUTH0_DOMAIN = 'AUTH0_DOMAIN_HERE'
 ALGORITHMS = ['RS256']
 API_AUDIENCE = 'AUDIENCE_HERE'
@@ -206,7 +206,7 @@ npm install -g @ionic/cli
 npm install
 ```
 3. Supply your own Auth0 information at \src\environments\environment.ts
-```
+```javascript
 url: 'URL HERE',
 audience: 'AUDIENCE HERE',
 clientId: 'CLIENT ID HERE',
