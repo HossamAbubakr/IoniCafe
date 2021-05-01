@@ -1,6 +1,8 @@
 # Ionic Café, Ionic/Angular Auth0 Cafe App
 
-![Showcase.gif](/Showcase.gif)
+<p align="center">
+  <img src="https://github.com/HossamAbubakr/IoniCafe/raw/main/Showcase.gif">
+</p>
 
 ## Table of Contents
 
@@ -20,7 +22,7 @@
 
 ## Summary
 
-Ionic Café is an app to manage drinks for a café, it is built using Ionic, Python and Flask that I built to practice full stack programming as part of udacity nanodegree.
+Ionic Café is an app to manage drinks for a café, it is built using Ionic, Python and Flask that I built to practice full stack programming as part of my **Full Stack Nanodegree from Udacity**.
 
 It demonstrates my understanding of full stack development, including creating and deploying a flask server as a backend to an Ionic front end and implementing Oauth (Auth0 in this case) with tiered access/permissions using RBAC (role-based access control)
 
