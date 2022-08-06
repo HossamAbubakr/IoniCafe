@@ -5,9 +5,9 @@ from jose import jwt
 from urllib.request import urlopen
 
 
-AUTH0_DOMAIN = 'AUTH0_DOMAIN_HERE'
+AUTH0_DOMAIN = 'AUTH0 DOMAIN HERE'
 ALGORITHMS = ['RS256']
-API_AUDIENCE = 'AUDIENCE_HERE'
+API_AUDIENCE = 'AUTH0 API AUDIENCE HERE'
 
 ## AuthError Exception
 '''
